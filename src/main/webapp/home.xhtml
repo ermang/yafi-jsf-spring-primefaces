@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>sample</title>
+</h:head>
+
+<body>
+this is sample lolololo
+<h:form>
+<!--    <p:messages id="msgs"/>-->
+
+<!--    <p>#{sample.val1}#{sample.val2}</p>-->
+<!--    <h:outputLabel for="param1" value="param1"/>-->
+<!--    <p:inputText id="param1" name="param1" value="#{sample.param.param1}" required="true" label="param1in_labeli">-->
+<!--        <f:validateLength minimum="2"/>-->
+<!--    </p:inputText>-->
+<!--    <p:message for="param1" display="icon"/>-->
+
+<!--    <br/>-->
+
+<!--    <h:outputLabel for="param2" value="param2"/>-->
+<!--    <p:inputText id="param2" name="param2" value="#{sample.param.param2}" />-->
+    <p:commandButton type="submit" action="#{home.search}" value="Search" update="@form"/>
+    <h:commandLink value="Go to next page" action="#{home.search}" />
+
+<!--    <p:dataTable id="mytable" var="entry" value="#{home.entryList}">-->
+<!--        <p:column headerText="Id">-->
+<!--            <h:outputText value="#{entry.id}" />-->
+<!--        </p:column>-->
+<!--        <p:column headerText="Content">-->
+<!--            <h:outputText value="#{entry.content}" />-->
+<!--        </p:column>-->
+<!--    </p:dataTable>-->
+
+    <p:repeat value="#{home.entryList}" var="entry">
+        <div>#{entry.id}</div>
+        <div>#{entry.content}</div>
+    </p:repeat>
+</h:form>
+
+
+</body>
+</html>
